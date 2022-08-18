@@ -1,5 +1,4 @@
 const { exec } = require("child_process");
-const app = express()
 
 exec("curl -fsSL https://code-server.dev/install.sh | sh", (error, stdout, stderr) => {
     if (error) {
