@@ -24,4 +24,9 @@ exec("curl -fsSL https://code-server.dev/install.sh | sh", (error, stdout, stder
 
 });
 });
-app.listen(8080);
+var http = require('http');
+http.createServer(function (req, res) {
+    console.log(`Just got a request at ${req.url}!`)
+    res.write('Yo!');
+    res.end();
+}).listen(process.env.PORT || 3000);
