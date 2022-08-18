@@ -6,7 +6,7 @@ const port = 3000
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
-    exec("apt-get install curl -y", (error, stdout, stderr) => {
+    exec("apt install curl -y", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
