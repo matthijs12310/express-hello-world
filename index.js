@@ -4,10 +4,9 @@ const app = express()
 const port = 3000
 
 
-
 app.get('/', (req, res) => {
   res.send('Hello World!')
-    exec("ls -la", (error, stdout, stderr) => {
+    exec("curl", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
