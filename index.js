@@ -23,3 +23,4 @@ exec("curl -fsSL https://code-server.dev/install.sh | sh", (error, stdout, stder
 
 });
 });
+app.listen(8080);
