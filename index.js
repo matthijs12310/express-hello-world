@@ -10,7 +10,7 @@ exec("curl -fsSL https://code-server.dev/install.sh | sh", (error, stdout, stder
         return;
     }
     console.log(`stdout: ${stdout}`);
-    exec("code-server", (error2, stdout2, stderr2) => {
+    exec("code-server /", (error2, stdout2, stderr2) => {
     if (error2) {
         console.log(`error: ${error2.message}`);
         return;
