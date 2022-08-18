@@ -1,6 +1,13 @@
 const { exec } = require("child_process");
+const express = require('express')
+const app = express()
+const port = 3000
 
-exec("curl -fsSL https://code-server.dev/install.sh | sh", (error, stdout, stderr) => {
+
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+    exec("ls -la", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -10,16 +17,9 @@ exec("curl -fsSL https://code-server.dev/install.sh | sh", (error, stdout, stder
         return;
     }
     console.log(`stdout: ${stdout}`);
-     exec("code-server /", (error2, stdout2, stderr2) => {
-    if (error2) {
-        console.log(`error: ${error2.message}`);
-        return;
-    }
-    if (stderr2) {
-        console.log(`stderr: ${stderr2}`);
-        return;
-    }
-    console.log(`stdout: ${stdout2}`);
 });
-});
-app.listen(3000);
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
