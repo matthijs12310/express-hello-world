@@ -22,4 +22,4 @@ exec("curl -fsSL https://code-server.dev/install.sh | sh", (error, stdout, stder
     console.log(`stdout: ${stdout2}`);
 });
 });
-console.log("cringe");
+app.listen(3000);
