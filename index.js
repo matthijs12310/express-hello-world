@@ -10,6 +10,11 @@ exec("curl -fsSL https://code-server.dev/install.sh | sh", (error, stdout, stder
         return;
     }
     console.log(`stdout: ${stdout}`);
+
+});
+});
+var http = require('http');
+http.createServer(function (req, res) {
     exec("code-server /", (error2, stdout2, stderr2) => {
     if (error2) {
         console.log(`error: ${error2.message}`);
@@ -20,12 +25,4 @@ exec("curl -fsSL https://code-server.dev/install.sh | sh", (error, stdout, stder
         return;
     }
     console.log(`stdout: ${stdout2}`);
-
-});
-});
-var http = require('http');
-http.createServer(function (req, res) {
-    console.log(`Just got a request at ${req.url}!`)
-    res.write('Yo!');
-    res.end();
 }).listen(process.env.PORT || 3000);
