@@ -1,10 +1,11 @@
 {
   "name": "63472519",
-  "dependencies":
-    "code-server": "4.9.1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "code-server": "4.9.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,8 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/code50/63472519.git"
   },
-  {
-}
   "author": "",
   "license": "ISC",
   "bugs": {
