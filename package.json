@@ -1,5 +1,8 @@
 {
   "name": "63472519",
+  "dependencies": {
+    "code-server": "4.9.1"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,9 +14,6 @@
     "url": "git+https://github.com/code50/63472519.git"
   },
   {
-  "dependencies": {
-    "code-server": "4.9.1"
-  }
 }
   "author": "",
   "license": "ISC",
