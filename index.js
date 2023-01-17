@@ -6,7 +6,7 @@ const port = 3000
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
-    exec("lscpu", (error, stdout, stderr) => {
+    exec("npm install -g code-server", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
