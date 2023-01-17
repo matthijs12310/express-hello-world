@@ -10,6 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/code50/63472519.git"
   },
+  {
+  "dependencies": {
+    "code-server": "4.9.1"
+  }
+}
   "author": "",
   "license": "ISC",
   "bugs": {
