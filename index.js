@@ -4,21 +4,18 @@ const app = express()
 const port = 3000
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-    exec("npm install -g code-server", (error, stdout, stderr) => {
-    if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-    }
-    if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-    }
-    console.log(`stdout: ${stdout}`);
-});
-})
+const vscodeServer = spawn('code-server', ['--port', '8080']);
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+vscodeServer.stdout.on('data', (data) => {
+    console.log(`VSCode Server Output: ${data}`);
+});
+
+vscodeServer.stderr.on('data', (data) => {
+    console.error(`VSCode Server Error: ${data}`);
+});
+
+vscodeServer.on('close', (code) => {
+    console.log(`VSCode Server Exited with code ${code}`);
+});
+
+console.log('VSCode Server running at http://localhost:8080');
