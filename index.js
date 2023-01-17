@@ -1,4 +1,4 @@
-const { exec } = require("child_process");
+const { spawn } = require('child_process');
 const express = require('express')
 const app = express()
 const port = 3000
