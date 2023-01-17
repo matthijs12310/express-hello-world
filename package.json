@@ -1,8 +1,7 @@
 {
   "name": "63472519",
-  "dependencies": {
-    "code-server": "4.9.1"
-  },
+  "dependencies":
+    "code-server": "4.9.1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
